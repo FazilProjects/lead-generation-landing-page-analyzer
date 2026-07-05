@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="A local JavaScript dashboard that turns a landing page brief into a practical lead generation audit report."
+    >
+    <title>Lead Generation Landing Page Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="background-motion" aria-hidden="true"></div>
+    <div class="grid-texture" aria-hidden="true"></div>
+    <div class="signal-lines" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <a class="skip-link" href="#workflow">Skip to analyzer</a>
+
+    <header class="hero">
+      <nav class="topbar" aria-label="Project">
+        <a class="brand" href="#workflow" aria-label="Lead Generation Landing Page Analyzer home">
+          <span class="brand-mark">FW</span>
+          <span>Fazil Waseem</span>
+        </a>
+        <span class="local-badge">Local rule-based dashboard</span>
+      </nav>
+
+      <div class="hero-grid">
+        <section class="hero-copy-block" aria-labelledby="page-title">
+          <p class="eyebrow">Performance marketing portfolio project</p>
+          <h1 id="page-title">Lead Generation Landing Page Analyzer</h1>
+          <p class="hero-copy">
+            Turn a short landing page brief into a practical conversion audit with scores,
+            risks, and improvement recommendations.
+          </p>
+          <div class="proof-chips" aria-label="Audit modules">
+            <span>Offer Clarity</span>
+            <span>CTA Strength</span>
+            <span>Form Friction</span>
+            <span>Trust Proof</span>
+            <span>Export Audit</span>
+          </div>
+        </section>
+
+        <aside class="hero-panel" aria-label="Example audit preview">
+          <div class="hero-panel-header">
+            <span>Audit Preview</span>
+            <span class="status-dot">Ready</span>
+          </div>
+          <div class="score-preview">
+            <div>
+              <span class="metric-label">Overall score</span>
+              <strong id="previewScore">84</strong>
+            </div>
+            <span id="previewRisk" class="risk-pill risk-medium">Medium risk</span>
+          </div>
+          <div class="mini-bars" aria-hidden="true">
+            <span style="--bar-width: 86%"></span>
+            <span style="--bar-width: 72%"></span>
+            <span style="--bar-width: 64%"></span>
+          </div>
+          <div class="preview-grid">
+            <div>
+              <span>Offer</span>
+              <strong>8/10</strong>
+            </div>
+            <div>
+              <span>CTA</span>
+              <strong>9/10</strong>
+            </div>
+            <div>
+              <span>Form</span>
+              <strong>7/10</strong>
+            </div>
+            <div>
+              <span>Trust</span>
+              <strong>8/10</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main id="workflow" class="workflow">
+      <section class="workflow-intro" aria-labelledby="workflow-title">
+        <div>
+          <p class="eyebrow">Dashboard workflow</p>
+          <h2 id="workflow-title">Create a client-style landing page audit</h2>
+        </div>
+        <p>
+          Enter the core campaign context once, then generate a structured report with
+          scoring, risk analysis, suggested page structure, and a 7-day improvement plan.
+        </p>
+      </section>
+
+      <div class="step-strip" aria-label="Analyzer steps">
+        <span><strong>Step 01</strong> Landing Page Brief</span>
+        <span><strong>Step 02</strong> Traffic &amp; Offer Inputs</span>
+        <span><strong>Step 03</strong> Generated Audit Report</span>
+      </div>
+
+      <div class="dashboard-grid">
+        <section class="panel input-panel" aria-labelledby="input-title">
+          <div class="panel-heading">
+            <div>
+              <span class="step-kicker">Step 01 and 02</span>
+              <h2 id="input-title">Landing page context</h2>
+            </div>
+            <button class="ghost-button" type="button" id="demoButton">Load demo</button>
+          </div>
+
+          <form id="auditForm">
+            <div class="field-group">
+              <label for="landingBrief">Landing page brief</label>
+              <textarea
+                id="landingBrief"
+                name="landingBrief"
+                rows="6"
+                required
+                placeholder="Describe the landing page, offer, services, audience, proof, and main conversion goal."
+              ></textarea>
+            </div>
+
+            <div class="form-grid two-columns">
+              <div class="field-group">
+                <label for="businessType">Business type</label>
+                <select id="businessType" name="businessType">
+                  <option>Local service business</option>
+                  <option>Ecommerce brand</option>
+                  <option>Coaching / consulting</option>
+                  <option>SaaS / software</option>
+                  <option>Agency / B2B service</option>
+                  <option>Course / education</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="trafficSource">Campaign traffic source</label>
+                <select id="trafficSource" name="trafficSource">
+                  <option>Google Ads</option>
+                  <option>Meta Ads</option>
+                  <option>Organic traffic</option>
+                  <option>Mixed traffic</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="offer">Offer</label>
+              <input
+                id="offer"
+                name="offer"
+                type="text"
+                placeholder="Free dental consultation + 20% off first teeth cleaning"
+              >
+            </div>
+
+            <div class="field-group">
+              <label for="audience">Target audience</label>
+              <input
+                id="audience"
+                name="audience"
+                type="text"
+                placeholder="People in Karachi looking for a trusted dentist or dental clinic"
+              >
+            </div>
+
+            <div class="form-grid two-columns">
+              <div class="field-group">
+                <label for="cta">Main CTA</label>
+                <input id="cta" name="cta" type="text" placeholder="Book Free Consultation">
+              </div>
+
+              <div class="field-group">
+                <label for="landingUrl">Landing page URL (optional text only)</label>
+                <input
+                  id="landingUrl"
+                  name="landingUrl"
+                  type="text"
+                  placeholder="https://example.com/landing-page"
+                >
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="formFields">Lead form fields</label>
+              <textarea
+                id="formFields"
+                name="formFields"
+                rows="4"
+                placeholder="Name, phone number, service needed, preferred appointment time"
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="primary-button" type="submit">Generate Landing Page Audit</button>
+              <button class="secondary-button" type="button" id="resetButton">Reset Dashboard</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel report-panel" aria-labelledby="report-title">
+          <div class="panel-heading report-heading">
+            <div>
+              <span class="step-kicker">Step 03</span>
+              <h2 id="report-title">Generated audit report</h2>
+            </div>
+            <button class="secondary-button compact-button" type="button" id="exportButton" disabled>
+              Export Audit
+            </button>
+          </div>
+
+          <div id="auditOutput" class="empty-state" aria-live="polite">
+            <div class="empty-icon" aria-hidden="true">01</div>
+            <h3>Waiting for landing page brief</h3>
+            <p>
+              Fill in the short brief and click Generate Landing Page Audit to create a
+              complete local audit report.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Portfolio disclaimer: this dashboard uses local JavaScript rules only. It does not
+        fetch live pages, connect to ad platforms, or perform real AI analysis.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
