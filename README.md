@@ -7,9 +7,7 @@ https://fazilprojects.github.io/lead-generation-landing-page-analyzer/
 
 ## Screenshot
 
-Screenshot placeholder:
-
-`lead-generation-landing-page-analyzer-dashboard.png`
+![Lead Generation Landing Page Analyzer](lead-generation-landing-page-analyzer-dashboard.png)
 
 ## Project Purpose
 
